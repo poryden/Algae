@@ -8,4 +8,4 @@ This tool takes input in the form of a list of words in a .txt file and compares
 
 As the project progresses, this page will go further in depth on the specifics of Algae and how to use it.
 
-Made by Lily "Bingo" Marvin (mailto:poryden.art@gmail.com) for use in the UAH Salmon Library Archives, but use is not restricted. Project begun 3/30/25. Made in Python.
+Made by Lily "Bingo" Marvin ([poryden.art@gmail.com](mailto:poryden.art@gmail.com)) for use in the UAH Salmon Library Archives, but use is not restricted. Project begun 3/30/25. Made in Python.
