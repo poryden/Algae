@@ -44,10 +44,10 @@ def when_last_updated():
     global LastUpdatedLCNAF
     global LastUpdatedLCSH
 
-    LastUpdatedMaster = LUFile.readline()
-    LastUpdatedNASA = LUFile.readline()
-    LastUpdatedLCNAF = LUFile.readline()
-    LastUpdatedLCSH = LUFile.readline()
+    LastUpdatedMaster = "Master last updated on " + LUFile.readline()
+    LastUpdatedNASA = "NASA last updated on " + LUFile.readline()
+    LastUpdatedLCNAF = "LCNAF last updated on " + LUFile.readline()
+    LastUpdatedLCSH = "LCSH last updated on " + LUFile.readline()
 
     LUFile.close()
 
@@ -62,10 +62,10 @@ def info_window():
 
     when_last_updated()
 
-    textMaster = tk.Label(info, background=subColor, font=mainFont, text="Master last updated on " + LastUpdatedMaster)
-    textNASA = tk.Label(info, background=subColor, font=mainFont, text="NASA last updated on " + LastUpdatedNASA)
-    textLCNAF = tk.Label(info, background=subColor, font=mainFont, text="LCNAF last updated on " + LastUpdatedLCNAF)
-    textLCSH = tk.Label(info, background=subColor, font=mainFont, text="LCSH last updated on " + LastUpdatedLCSH)
+    textMaster = tk.Label(info, background=subColor, font=mainFont, text=LastUpdatedMaster)
+    textNASA = tk.Label(info, background=subColor, font=mainFont, text=LastUpdatedNASA)
+    textLCNAF = tk.Label(info, background=subColor, font=mainFont, text=LastUpdatedLCNAF)
+    textLCSH = tk.Label(info, background=subColor, font=mainFont, text=LastUpdatedLCSH)
 
     emailText = tk.Label(info, background=subColor, font=mainFont, text="\nIf any are outdated, check Algae's GitHub page for\nany recent updates. If there are none, feel free to\n reach out on GitHub or at poryden.art@gmail.com")
 
@@ -87,8 +87,6 @@ def howTo_window():
     howTo.minsize(500,500)
     howTo.maxsize(500,500)
 
-
-
     helpBlurb = tk.Label(howTo, background=subColor, font=mainFont, text="To use Algae, yadyaydaydya")
 
     closeHelp = tk.Button(howTo, text="Close", command=howTo.destroy)
@@ -104,6 +102,7 @@ helpOpen = tk.Button(root, text="How to use", command=howTo_window, padx=10, pad
 infoOpen.grid(row=0, column=0)
 helpOpen.grid(row=0, column=1)
 
+root.mainloop()
 
 
 '''
