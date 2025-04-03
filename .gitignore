@@ -1,1 +1,4 @@
-.pyproj
+*.pyproj
+
+NASA.txt
+Master.txt
